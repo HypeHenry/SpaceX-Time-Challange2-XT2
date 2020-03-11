@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900');
+
+/*  Variables */
+:root{
+    --primary: #F2F2F2;
+    --secondary: #181C1F;
+}
+/* reset */
+html, body{
+    max-width: 100%;
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Oxanium Regular', serif;
+}
+/* base style*/
+body{
+    background: var(--secondary);
+    /*overflow-x: hidden;*/
+}
+video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+    background: url('https://nl.wikipedia.org/wiki/SpaceX#/media/Bestand:SpaceX-Logo.svg') no-repeat;
+    background-size: cover;
+    transition: 1s opacity;
+}
+/* fonts*/
+@font-face {
+    font-family: 'Oxanium Regular';
+    src: url("../fonts/Oxanium/Oxanium-Regular.ttf");
+}
+
+h1, h2, h3{
+    color: var(--secondary);
+    font-weight: normal;
+}
+
+h1, figure{
+    font-size: 1.2em;
+    border-bottom: 0;
+    text-align: center;
+}
+
+h2{
+    font-size: 1.6em;
+    color: var(--primary);
+    text-align: center;
+}
+
+/* mobiele styles */
+
+
+figure{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 55%;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: auto;
+    width: 95%;
+    padding: 0 2% 2%;
+}
+article{
+    display: flex;
+    background: RGBA(30, 35, 38, 0.7);
+    text-align: center;
+    margin-bottom: 1rem;
+    padding: 1rem;
+
+}
+
+.ground {
+    min-width: 12.5rem;
+    width: 18.75rem;
+    height: 15rem;
+    margin: 1.5rem auto;
+}
+.bar{
+    min-width: 12.5rem;
+    width: 18.75rem;
+    height: 25rem;
+    margin: 1.5rem auto;
+}
+
+.planeet{
+    width: 10rem;
+    height: 10rem;
+}
+.earth{
+    width: 10rem;
+    height: 10rem;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0 0 20px 20px #000 inset, 0 0 20px 2px #000;
+}
+
+.earth:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: -20px -20px 50px 2px #000 inset;
+    border-radius: 50%;
+}
+
+.earth > div {
+    width: 200%;
+    height: 100%;
+    animation: spin 30s linear alternate infinite;
+    background-image: url(../img/earth.jpg);
+    background-size: cover;
+}
+@keyframes spin {
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+
+
+/*  tablet styles*/
+@media screen and ( min-width: 620px) {
+    html {
+        height: 100%;
+    }
+    main{
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    article{
+        width: 30%;
+    }
+    .bar{
+        width: 90%;
+    }
+
+}
+
+
+/* Desktop */
+@media screen and (min-width: 1200px) {
+   .pie .radar{
+       width: 50%;
+   }
+}

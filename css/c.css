@@ -4,6 +4,10 @@
 :root{
     --primary: #F2F2F2;
     --secondary: #181C1F;
+    --timer-day: auto;
+    --timer-hours: auto;
+    --timer-minutes: auto;
+    --timer-seconds: auto;
 }
 /* reset */
 html, body{
@@ -91,12 +95,87 @@ article{
     height: 15rem;
     margin: 1.5rem auto;
 }
-.bar{
+.bar {
     min-width: 12.5rem;
     width: 18.75rem;
     height: 25rem;
     margin: 1.5rem auto;
+    background: linear-gradient(25deg, #011126 0, #ffffff 100%);
+    font-family: 'Montserrat', 'sans-serif';
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+.clock-day:before {
+    content: var(--timer-day);
+}
+.clock-hours:before {
+    content: var(--timer-hours);
+}
+.clock-minutes:before {
+    content: var(--timer-minutes);
+}
+.clock-seconds:before {
+    content: var(--timer-seconds);
+}
+.clock-container {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: #080808;
+    border-radius: 5px;
+    padding: 60px 20px;
+    box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.15), 0 15px 90px 30px rgba(0, 0, 0, 0.25);
+    display: flex;
+}
+.clock-col {
+    text-align: center;
+    margin-right: 40px;
+    margin-left: 40px;
+    min-width: 90px;
+    position: relative;
+}
+.clock-col:not(:last-child):before, .clock-col:not(:last-child):after {
+    content: "";
+    background-color: rgba(255, 255, 255, 0.3);
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    right: -42px;
+}
+.clock-col:not(:last-child):before {
+    top: 35%;
+}
+.clock-col:not(:last-child):after {
+    top: 50%;
+}
+.clock-timer:before {
+    color: #fff;
+    font-size: 4.2rem;
+    text-transform: uppercase;
+}
+.clock-label {
+    color: rgba(255, 255, 255, 0.35);
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    margin-top: 10px;
+}
+@media (max-width: 825px) {
+    .clock-container {
+        flex-direction: column;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .clock-col + .clock-col {
+        margin-top: 20px;
+    }
+    .clock-col:before, .clock-col:after {
+        display: none !important;
+    }
+}
+
 
 .planeet{
     width: 10rem;
@@ -131,6 +210,40 @@ article{
     background-size: cover;
 }
 @keyframes spin {
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.mars{
+    width: 10rem;
+    height: 10rem;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0 0 20px 20px #000 inset, 0 0 20px 2px #000;
+}
+
+.mars:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: -20px -20px 50px 2px #000 inset;
+    border-radius: 50%;
+}
+
+.mars > div {
+    width: 200%;
+    height: 100%;
+    animation: spin2 10s linear alternate infinite;
+    background-image: url(../img/mars.jpeg);
+    background-size: cover;
+}
+@keyframes spin2 {
     to {
         transform: translateX(-50%);
     }

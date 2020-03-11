@@ -12,14 +12,14 @@
         </figure>
     </header>
 
-<!--        <video poster="https://nl.wikipedia.org/wiki/SpaceX#/media/Bestand:SpaceX-Logo.svg" id="bgvid" playsinline autoplay muted loop>-->
-<!--            &lt;!&ndash;-->
-<!--          - Video needs to be muted, since Chrome 66+ will not autoplay video with sound.-->
-<!--          WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  &ndash;&gt;-->
+        <video poster="https://nl.wikipedia.org/wiki/SpaceX#/media/Bestand:SpaceX-Logo.svg" id="bgvid" playsinline autoplay muted loop>
+            <!--
+          - Video needs to be muted, since Chrome 66+ will not autoplay video with sound.
+          WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
 <!--            <source src="video/spacex.mp4" type="video/webm">-->
-<!--            <source src="video/spacex.mp4" type="video/mp4">-->
+<!--            <source src="video/day.mp4" type="video/mp4">-->
 
-<!--        </video>-->
+        </video>
     <main>
             <article class="ground">
                 <figure>
@@ -30,12 +30,45 @@
             </article>
             <article class="ground">
                 <figure>
-                    <img class="planeet" src="img/mars.svg" alt="earth">
+                    <div class="mars">
+                        <div></div>
+                    </div>
                 </figure>
             </article>
+
             <article class="bar">
-                <canvas id="myfuel"></canvas>
+                <div class="clock-container">
+                    <div class="clock-col">
+                        <p class="clock-day clock-timer">
+                        </p>
+                        <p class="clock-label">
+                            Day
+                        </p>
+                    </div>
+                    <div class="clock-col">
+                        <p class="clock-hours clock-timer">
+                        </p>
+                        <p class="clock-label">
+                            Hours
+                        </p>
+                    </div>
+                    <div class="clock-col">
+                        <p class="clock-minutes clock-timer">
+                        </p>
+                        <p class="clock-label">
+                            Minutes
+                        </p>
+                    </div>
+                    <div class="clock-col">
+                        <p class="clock-seconds clock-timer">
+                        </p>
+                        <p class="clock-label">
+                            Seconds
+                        </p>
+                    </div>
+                </div>
             </article>
     </main>
+    <script src="js/time.js"></script>
 </body>
 </html>

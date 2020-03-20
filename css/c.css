@@ -100,20 +100,18 @@ article{
     width: 18.75rem;
     height: 25rem;
     margin: 1.5rem auto;
-    /*background: linear-gradient(25deg, #011126 0, #ffffff 100%);*/
+    background: linear-gradient(25deg, #011126 0, #ffffff 100%);
     font-family: 'Montserrat', 'sans-serif';
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.clock-container{
+.clock{
     position: absolute;
-    top: 50%;
-    left: 50%;
     transform: translateX(-50) translateY(-50%);
     color: #fff;
-    font-size: 80px;
+    font-size: 50px;
     padding: 0 5px 0 5px;
 
 }
@@ -192,7 +190,7 @@ article{
 
 
 
-/*  tablet styles*/
+/*  tabvar styles*/
 @media screen and ( min-width: 620px) {
     html {
         height: 100%;

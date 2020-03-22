@@ -1,7 +1,7 @@
 # SpaceX-Time-Challange2-XT2
 Challange 2 van CMD XT2
 
-Link to the website: https://hypehenry.github.io/SpaceX-Dashboard-Challange1-XT2/ 
+Link to the website: https://hypehenry.github.io/SpaceX-Time-Challange2-XT2/
 
 ### HOW I MADE IT 🚀
 

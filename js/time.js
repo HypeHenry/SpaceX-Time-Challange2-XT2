@@ -6,7 +6,7 @@ function showSpaceTime() {
     let s = date.getSeconds(); // 0 van 59
     let sessie = "AM";
 
-    if (h == 0) {
+    if (h === 0) {
         h = 12;
     }
 

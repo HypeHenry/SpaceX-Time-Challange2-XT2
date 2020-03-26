@@ -11,24 +11,10 @@ Eerst heb hier gebruik gemaakt van let ipv var naar standaard van ES6 🇺🇳
     let h = date.getHours(); // van 0 tot 23
     let m = date.getMinutes(); // van 0 tot 59
     let s = date.getSeconds(); // 0 van 59
-    let sessie = "AM";
 
 ```
 
-Ik heb gebruik gemaakt van 12-uurssysteem.
-Ante meridiem (vaak afgekort tot a.m., AM, A.M. wordt gebruikt als je een tijdstip tussen 12 uur 's nachts tot 12 uur 's middags aan wilt geven. )
 
-Post meridiem (vaak afgekort tot p.m., PM, P.M.wordt gebruikt als je een tijdstip tussen 12 uur 's middags tot 12 uur 's nachts aan wilt geven.) 
-```
-    if (h === 0) {
-        h = 12;
-    }
-
-    if (h > 12) { // na 12 uur smiddags
-        h = h - 12;
-        sessie = "PM";
-    }
-```
 
 Om de dagen weer te geven heb ik gebruik gemaakt van case switch 
 
@@ -60,7 +46,7 @@ Om de dagen weer te geven heb ik gebruik gemaakt van case switch
             break;
     }
 ```
-vervolgens aan geroepen met: 
+Vervolgens aan geroepen met: 
 
 ```
     let time = dag +" " + h + ":" + m + ":" + s + " " + sessie ;
@@ -70,6 +56,29 @@ vervolgens aan geroepen met:
 ```    
     document.getElementById("MySpaceDisplay").innerText = time;
     document.getElementById("MySpaceDisplay").textCont = time;
+```
+
+Van 7 tot 18 heb je de achtergrond: Daglicht
+
+Van 18 tot 22 heb je de achtergrond: Nachtsterren
+
+Tussen 22 tot 7 heb je de achtergrond: Space 
+
+
+```    
+    if (h >= 7 && h < 18) {
+        document.getElementById("videospace").style.display = "none";
+        document.getElementById("videonight").style.display = "none";
+
+
+    } else if (h >= 18 && h < 22) {
+        document.getElementById("videospace").style.display = "none";
+        document.getElementById("videoday").style.display = "none";
+
+    } else {
+        document.getElementById("videonight").style.display = "none";
+        document.getElementById("videoday").style.display = "none";
+    }
 ```
 
 tha da 🔥🔥🔥

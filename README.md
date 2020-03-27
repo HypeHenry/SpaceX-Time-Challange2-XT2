@@ -8,9 +8,9 @@ Link to the website: https://hypehenry.github.io/SpaceX-Time-Challange2-XT2/
 Eerst heb hier gebruik gemaakt van let ipv var naar standaard van ES6 🇺🇳
 ```
     let date = new Date();
-    let h = date.getHours(); // van 0 tot 23
-    let m = date.getMinutes(); // van 0 tot 59
-    let s = date.getSeconds(); // 0 van 59
+    let h = date.getHours(); // van 0 tot 23 uur
+    let m = date.getMinutes(); // van 0 tot 59 minuten
+    let s = date.getSeconds(); // 0 van 59 secondes 
 
 ```
 

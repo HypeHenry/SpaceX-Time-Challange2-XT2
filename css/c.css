@@ -106,7 +106,7 @@ article{
     box-shadow: 0 0 20px 20px #000 inset, 0 0 20px 2px #000;
 }
 
-.earth:after {
+.earth::after {
     position: absolute;
     content: "";
     top: 0;
@@ -140,7 +140,7 @@ article{
     box-shadow: 0 0 20px 20px #000 inset, 0 0 20px 2px #000;
 }
 
-.mars:after {
+.mars::after {
     position: absolute;
     content: "";
     top: 0;
